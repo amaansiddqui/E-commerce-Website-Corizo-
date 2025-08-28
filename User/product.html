@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Ekart</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🛍%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light min-vh-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="container-fluid px-4 py-3 d-flex align-items-center">
+      <div class="h4 font-weight-bold mr-4">Ekart</div>
+      <div class="flex-grow-1 mr-4">
+        <input type="text" placeholder="Search products..."
+               class="form-control" />
+      </div>
+      <nav class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary mr-2" aria-label="Cart">🛒</button>
+        <button class="btn btn-outline-secondary mr-2" aria-label="Notifications">🔔</button>
+        <button class="btn btn-light">Profile ▾</button>
+        <button class="btn btn-outline-danger ml-2" onclick="handleLogout()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid py-4">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 mb-4">
+        <div class="bg-white rounded shadow p-3 mb-4">
+          <nav class="nav flex-column">
+            <a class="nav-link text-dark" href="home.html">🏠 Home</a>
+            <a class="nav-link text-dark" href="#">📦 My Orders</a>
+            <a class="nav-link text-dark" href="#">🛒 Cart</a>
+            <a class="nav-link text-dark" href="#">🔔 Notifications</a>
+            <a class="nav-link text-dark" href="#" onclick="handleLogout()">🚪 Logout</a>
+          </nav>
+        </div>
+
+        <div class="bg-white rounded shadow p-3">
+          <h5 class="font-weight-bold mb-3">Filters</h5>
+          <div class="form-group">
+            <select class="form-control mb-3">
+              <option>Category</option>
+              <option>Electronics</option>
+              <option>Clothing</option>
+              <option>Home</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="small text-muted">Price Range</label>
+            <input type="range" class="form-control-range" />
+          </div>
+          <div class="form-group">
+            <select class="form-control mb-3">
+              <option>Sort by</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Rating</option>
+              <option>Newest</option>
+            </select>
+          </div>
+          <button class="btn btn-dark btn-block">Apply</button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="col-lg-9">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../user-dashboard.html">Products</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Product Name</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+          <!-- Product Image -->
+          <div class="col-md-6 mb-4">
+            <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 400px;">
+              <div class="text-center">
+                <div style="font-size: 4rem;">📱</div>
+                <p class="text-muted mt-2">Product Image</p>
+              </div>
+            </div>
+            <div class="d-flex gap-2 mt-3">
+              <div class="bg-light rounded p-2" style="width: 80px; height: 80px; cursor: pointer;">
+                <div class="text-center">1</div>
+              </div>
+              <div class="bg-light rounded p-2" style="width: 80px; height: 80px; cursor: pointer;">
+                <div class="text-center">2</div>
+              </div>
+              <div class="bg-light rounded p-2" style="width: 80px; height: 80px; cursor: pointer;">
+                <div class="text-center">3</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="col-md-6">
+            <h1 class="h2 font-weight-bold mb-3">Premium Smartphone X1</h1>
+            
+            <!-- Rating -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="text-warning mr-2">
+                ★★★★★
+              </div>
+              <span class="text-muted">(128 reviews)</span>
+            </div>
+
+            <!-- Price -->
+            <div class="mb-4">
+              <h3 class="text-primary font-weight-bold">₹24,999</h3>
+              <span class="text-muted text-decoration-line-through">₹29,999</span>
+              <span class="text-success ml-2">17% off</span>
+            </div>
+
+            <!-- Highlights -->
+            <div class="mb-4">
+              <h6 class="font-weight-bold mb-2">Key Features:</h6>
+              <ul class="list-unstyled">
+                <li>✓ 6.7-inch Super AMOLED Display</li>
+                <li>✓ 128GB Storage | 8GB RAM</li>
+                <li>✓ 48MP Triple Camera System</li>
+                <li>✓ 5000mAh Battery</li>
+                <li>✓ 5G Ready | Fast Charging</li>
+              </ul>
+            </div>
+
+            <!-- Quantity and Add to Cart -->
+            <div class="mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <label class="mr-3 font-weight-bold">Quantity:</label>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-outline-secondary btn-sm">-</button>
+                  <input type="number" class="form-control form-control-sm mx-2" value="1" style="width: 60px;">
+                  <button class="btn btn-outline-secondary btn-sm">+</button>
+                </div>
+              </div>
+              
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary btn-lg flex-grow-1">
+                  🛒 Add to Cart
+                </button>
+                <button class="btn btn-outline-primary btn-lg">
+                  ❤️ Wishlist
+                </button>
+              </div>
+            </div>
+
+            <!-- Delivery Info -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h6 class="font-weight-bold mb-2">Delivery Options:</h6>
+                <p class="mb-1">📦 Free delivery by Tomorrow</p>
+                <p class="mb-0 text-success">✓ In stock - Ready to ship</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title mb-4">Product Description</h4>
+                <p>The Premium Smartphone X1 redefines mobile excellence with its cutting-edge features and sleek design. Experience unparalleled performance with our latest processor and stunning display technology.</p>
+                
+                <h6 class="mt-4">Specifications:</h6>
+                <table class="table table-bordered">
+                  <tr>
+                    <td class="font-weight-bold">Display</td>
+                    <td>6.7-inch Super AMOLED, 120Hz</td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">Processor</td>
+                    <td>Octa-core Snapdragon 8 Gen 2</td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">Storage</td>
+                    <td>128GB UFS 3.1</td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">RAM</td>
+                    <td>8GB LPDDR5</td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">Camera</td>
+                    <td>48MP Main + 12MP Ultra Wide + 5MP Macro</td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">Battery</td>
+                    <td>5000mAh with 67W Fast Charging</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div> 
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  function handleLogout() {
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userPassword');
+    window.location.href = 'login.html'; // Redirect to login page
+  }
+</script>
+<footer class="border-top bg-white mt-5">
+    <div class="container-fluid px-4 py-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div class="text-muted small">© 2025 Ekart</div>
+
+        <nav class="d-flex gap-3">
+          <a href="#" class="text-muted small">About</a>
+          <a href="#" class="text-muted small">Contact</a>
+          <a href="#" class="text-muted small">Help</a>
+          <a href="#" class="text-muted small">Policies</a>
+        </nav>
+
+</html>

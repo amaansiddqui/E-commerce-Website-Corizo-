@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Ekart</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🛍%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light min-vh-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="container-fluid px-4 py-3 d-flex align-items-center">
+      <div class="h4 font-weight-bold mr-4">Ekart</div>
+      <div class="flex-grow-1 mr-4">
+        <input type="text" placeholder="Search products..."
+               class="form-control" />
+      </div>
+      <nav class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary mr-2" aria-label="Cart">🛒</button>
+        <button class="btn btn-outline-secondary mr-2" aria-label="Notifications">🔔</button>
+        <button class="btn btn-light">Profile ▾</button>
+        <button class="btn btn-outline-danger ml-2" onclick="handleLogout()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid py-4">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 mb-4">
+        <div class="bg-white rounded shadow p-3 mb-4">
+          <nav class="nav flex-column">
+            <a class="nav-link text-dark" href="../user-dashboard.html">🏠 Home</a>
+            <a class="nav-link text-dark" href="../User/myorder.html">📦 My Orders</a>
+            <a class="nav-link text-dark" href="#">🛒 Cart</a>
+            <a class="nav-link text-dark" href="#">🔔 Notifications</a>
+            <a class="nav-link text-dark" href="#" onclick="handleLogout()">🚪 Logout</a>
+          </nav>
+        </div>
+
+        <div class="bg-white rounded shadow p-3">
+          <h5 class="font-weight-bold mb-3">Quick Links</h5>
+          <div class="nav flex-column">
+            <a class="nav-link text-dark mb-2" href="../user-dashboard.html">📱 Electronics</a>
+            <a class="nav-link text-dark mb-2" href="../user-dashboard.html">👕 Clothing</a>
+            <a class="nav-link text-dark mb-2" href="../user-dashboard.html">🏠 Home & Kitchen</a>
+            <a class="nav-link text-dark" href="../user-dashboard.html">🎮 Gaming</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="col-lg-9">
+        <div class="text-center py-5">
+          <div class="mb-4">
+            <h1 class="display-4 text-primary mb-3">Welcome to Ekart!</h1>
+            <p class="lead text-muted">Your one-stop destination for all your shopping needs</p>
+          </div>
+          
+          <div class="mb-5">
+            <h3 class="mb-4">Discover Amazing Products</h3>
+            <p class="text-muted mb-4">Browse through our extensive collection of products</p>
+            <button class="btn btn-primary btn-lg" onclick="window.location.href='../user-dashboard.html'">
+              Explore Products →
+            </button>
+          </div>
+
+          <!-- Featured Categories -->
+          <div class="row mb-5">
+            <div class="col-md-3 mb-3">
+              <div class="card h-100 text-center p-4">
+                <div class="mb-3" style="font-size: 2.5rem;">📱</div>
+                <h5>Electronics</h5>
+                <p class="text-muted small">Latest gadgets & tech</p>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card h-100 text-center p-4">
+                <div class="mb-3" style="font-size: 2.5rem;">👕</div>
+                <h5>Clothing</h5>
+                <p class="text-muted small">Fashion & apparel</p>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card h-100 text-center p-4">
+                <div class="mb-3" style="font-size: 2.5rem;">🏠</div>
+                <h5>Home</h5>
+                <p class="text-muted small">Furniture & decor</p>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card h-100 text-center p-4">
+                <div class="mb-3" style="font-size: 2.5rem;">🎮</div>
+                <h5>Gaming</h5>
+                <p class="text-muted small">Games & accessories</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Offers -->
+          <div class="bg-primary text-white rounded p-5 mb-5">
+            <h2 class="mb-3">Special Summer Sale!</h2>
+            <p class="mb-4">Up to 50% off on selected items. Limited time offer!</p>
+            <button class="btn btn-light btn-lg" onclick="window.location.href='../user-dashboard.html'">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="border-top bg-white mt-5">
+    <div class="container-fluid px-4 py-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div class="text-muted small">© 2025 Ekart</div>
+        <nav class="d-flex gap-3">
+          <a href="#" class="text-muted small">About</a>
+          <a href="#" class="text-muted small">Contact</a>
+          <a href="#" class="text-muted small">Help</a>
+          <a href="#" class="text-muted small">Policies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  function handleLogout() {
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userPassword');
+    window.location.href = 'login.html'; // Redirect to login page
+  }
+
+  // Auto-redirect to products after 3 seconds
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      window.location.href = '../user-dashboard.html';
+    }, 3000);
+  });
+</script>
+</html>
