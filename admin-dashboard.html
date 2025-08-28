@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Admin Panel (Wireframe)</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🛍%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+</head>
+<body class="bg-light min-vh-100">
+
+  <div class="min-vh-100 d-flex">
+    <!-- Sidebar -->
+    <aside class="bg-dark text-white p-4" style="width: 280px;">
+      <h2 class="h4 font-weight-bold mb-4">Admin Panel</h2>
+      <nav class="nav flex-column">
+        <a class="nav-link text-white py-2" href="#">📊 Dashboard</a>
+        <a class="nav-link text-white py-2" href="#">➕ Add Product</a>
+        <a class="nav-link text-white py-2" href="#">🛍 View Products</a>
+        <a class="nav-link text-white py-2" href="#">📦 View Orders</a>
+        <a class="nav-link text-white py-2" href="#">👤 View Customers</a>
+        <a class="nav-link text-white py-2" href="#">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-grow-1 p-4 bg-light">
+      <header class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2 font-weight-bold">Dashboard Overview</h1>
+        <button class="btn btn-outline-secondary">Admin ▾</button>
+      </header>
+
+      <!-- KPI Cards -->
+      <section class="row mb-4">
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-muted small">Total Orders</div>
+              <div class="h4 font-weight-bold">1,248</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-muted small">Total Customers</div>
+              <div class="h4 font-weight-bold">642</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-muted small">Products</div>
+              <div class="h4 font-weight-bold">320</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-muted small">Revenue</div>
+              <div class="h4 font-weight-bold">₹12.4L</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Orders -->
+      <section class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="h4 font-weight-bold">Recent Orders</h2>
+          <button class="btn btn-dark">Add Order</button>
+        </div>
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#10293</td>
+                  <td>A. Sharma</td>
+                  <td>₹2,499</td>
+                  <td><span class="badge badge-success">Delivered</span></td>
+                  <td>2025-08-10</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                </tr>
+                <tr>
+                  <td>#10294</td>
+                  <td>M. Khan</td>
+                  <td>₹1,199</td>
+                  <td><span class="badge badge-warning">Shipped</span></td>
+                  <td>2025-08-11</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                </tr>
+                <tr>
+                  <td>#10295</td>
+                  <td>S. Verma</td>
+                  <td>₹5,899</td>
+                  <td><span class="badge badge-info">Processing</span></td>
+                  <td>2025-08-12</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customers -->
+      <section>
+        <h2 class="h4 font-weight-bold mb-3">Customers</h2>
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Orders</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A. Sharma</td>
+                  <td>a.sharma@example.com</td>
+                  <td>12</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                </tr>
+                <tr>
+                  <td>M. Khan</td>
+                  <td>m.khan@example.com</td>
+                  <td>8</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

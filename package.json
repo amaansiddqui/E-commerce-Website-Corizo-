@@ -1,0 +1,15 @@
+{
+  "name": "ecommerce-dashboards",
+  "version": "1.0.0",
+  "description": "This package contains static HTML wireframes for an **E-commerce** project as per the reference PDF modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.18.0"
+  }
+}

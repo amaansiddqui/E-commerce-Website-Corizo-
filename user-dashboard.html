@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard | Ekart</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🛍%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+</head>
+<body class="bg-light min-vh-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="container-fluid px-4 py-3 d-flex align-items-center">
+      <div class="h4 font-weight-bold mr-4">Ekart</div>
+      <div class="flex-grow-1 mr-4">
+        <input type="text" placeholder="Search products..."
+               class="form-control" />
+      </div>
+      <nav class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary mr-2" aria-label="Cart">🛒</button>
+        <button class="btn btn-outline-secondary mr-2" aria-label="Notifications">🔔</button>
+        <button class="btn btn-light">Profile ▾</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid py-4">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 mb-4">
+        <div class="bg-white rounded shadow p-3 mb-4">
+          <nav class="nav flex-column">
+            <a class="nav-link text-dark" href="User/home.html">🏠 Home</a>
+            <a class="nav-link text-dark" href="User/myorder.html">📦 My Orders</a>
+            <a class="nav-link text-dark" href="#">🛒 Cart</a>
+            <a class="nav-link text-dark" href="#">🔔 Notifications</a>
+<a class="nav-link text-dark" href="#" onclick="handleLogout()">🚪 Logout</a>
+          </nav>
+        </div>
+
+        <div class="bg-white rounded shadow p-3">
+          <h5 class="font-weight-bold mb-3">Filters</h5>
+          <div class="form-group">
+            <select class="form-control mb-3">
+              <option>Category</option>
+              <option>Electronics</option>
+              <option>Clothing</option>
+              <option>Home</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="small text-muted">Price Range</label>
+            <input type="range" class="form-control-range" />
+          </div>
+          <div class="form-group">
+            <select class="form-control mb-3">
+              <option>Sort by</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Rating</option>
+              <option>Newest</option>
+            </select>
+          </div>
+          <button class="btn btn-dark btn-block">Apply</button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="col-lg-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="h3 font-weight-bold">Products</h2>
+          <span class="text-muted small">Showing 9 of 120</span>
+        </div>
+        <div class="row">
+          <!-- Product Cards (wireframe placeholders) -->
+          
+          <div class="col-md-6 col-xl-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 160px;">Image</div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Product Name</h5>
+                <p class="card-text text-muted small">Short description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">₹999</span>
+                  <button class="btn btn-dark btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 160px;">Image</div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Product Name</h5>
+                <p class="card-text text-muted small">Short description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">₹999</span>
+                  <button class="btn btn-dark btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 160px;">Image</div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Product Name</h5>
+                <p class="card-text text-muted small">Short description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">₹999</span>
+                  <button class="btn btn-dark btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 160px;">Image</div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Product Name</h5>
+                <p class="card-text text-muted small">Short description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">₹999</span>
+                  <button class="btn btn-dark btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 160px;">Image</div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Product Name</h5>
+                <p class="card-text text-muted small">Short description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">₹999</span>
+                  <button class="btn btn-dark btn-sm">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 160px;">Image</div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Product Name</h5>
+                <p class="card-text text-muted small">Short description</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+</body>
+<script>
+  function handleLogout() {
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userPassword');
+    window.location.href = 'User/login.html'; // Redirect to login page
+  }
+
+  function viewProduct() {
+    window.location.href = 'User/product.html';
+  }
+
+  // Add click event listeners to all product cards
+  document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.card.h-100');
+    productCards.forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function(e) {
+        // Don't trigger if the click was on the Add to Cart button
+        if (!e.target.closest('.btn')) {
+          viewProduct();
+        }
+      });
+    });
+  });
+</script>
+
+<footer class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-sm text-gray-600 flex flex-wrap gap-4 justify-between">
+      <div>© 2025 Ekart</div>
+      <nav class="flex gap-10">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Help</a>
+        <a href="#">Policies</a>
+      </nav>
+    </div>
+  </footer>
+</html>
